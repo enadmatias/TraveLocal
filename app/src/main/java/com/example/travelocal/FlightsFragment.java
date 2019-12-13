@@ -11,11 +11,21 @@ import android.widget.AutoCompleteTextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FlightsFragment extends Fragment {
     String[] country = {"New York", "Japan", "Korea", "San Francisco", "Taiwan", "China", "Malaysia", "Singapore"};
     private View view;
     private Context context;
+    private RecyclerView recyclerView;
+    private List<Flights> flightsList = new ArrayList<>();
+    private FlightsAdapter mAdapter;
+
+
 
     public FlightsFragment(Context ctx){
         this.context = ctx;
@@ -41,6 +51,20 @@ public class FlightsFragment extends Fragment {
         actv1.setThreshold(1);
         actv1.setAdapter(adapter);
 
+        recyclerView = view.findViewById(R.id.recycler_view);
+        mAdapter = new FlightsAdapter(flightsList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setAdapter(mAdapter);
 
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        flightsList.clear();
+        flightsList.add(new Flights(R.drawable.norway, "Norway", "1200"));
+        flightsList.add(new Flights(R.drawable.tokyo, "japan", "900"));
+    }
+
 }
