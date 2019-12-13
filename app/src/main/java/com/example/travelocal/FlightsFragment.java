@@ -40,5 +40,7 @@ public class FlightsFragment extends Fragment {
         actv.setAdapter(adapter);
         actv1.setThreshold(1);
         actv1.setAdapter(adapter);
+
+
     }
 }

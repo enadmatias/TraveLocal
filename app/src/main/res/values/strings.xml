@@ -5,4 +5,15 @@
     <string name="tab_text_2">Train</string>
     <string name="tab_text_3">Bus</string>
     <string name="tab_text_4">Hotel</string>
+
+    <string-array name="passenger_type">
+        <item>Adults</item>
+        <item>Children</item>
+        <item>Adults + Children</item>
+    </string-array>
+    <string-array name="class_type">
+        <item>Economy</item>
+        <item>First Class</item>
+        <item>Business Class</item>
+    </string-array>
 </resources>
