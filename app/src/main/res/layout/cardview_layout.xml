@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="true"
+    android:layout_marginTop="15dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -13,16 +17,18 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView_places_flight"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_height="200dp"
+                tools:srcCompat="@drawable/japan"
+                android:scaleType="centerCrop"/>
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/txtView_rates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -49,20 +55,22 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/txtView_places"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
                     android:text="TextView" />
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:paddingLeft="10dp"
+                    android:text="Complete Guide Tour" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/txtView_prices"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="right"

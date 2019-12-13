@@ -2,7 +2,12 @@ package com.example.travelocal;
 
 public class Flights {
     private int photo;
-    private String place, price;
+    private String place;
+    private String price;
+    private String rates;
+
+
+
 
     public int getPhoto() {
         return photo;
@@ -28,9 +33,18 @@ public class Flights {
         this.price = price;
     }
 
-    public Flights(int photo, String place, String price) {
+    public String getRates() {
+        return rates;
+    }
+
+    public void setRates(String rates) {
+        this.rates = rates;
+    }
+
+    public Flights(int photo, String place, String price, String rates) {
         this.photo = photo;
         this.place = place;
         this.price = price;
+        this.rates = rates;
     }
 }

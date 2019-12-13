@@ -1,6 +1,7 @@
 package com.example.travelocal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.chip.Chip;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +27,7 @@ public class FlightsFragment extends Fragment {
     private RecyclerView recyclerView;
     private List<Flights> flightsList = new ArrayList<>();
     private FlightsAdapter mAdapter;
+    private Chip chip;
 
 
 
@@ -57,14 +61,25 @@ public class FlightsFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(mAdapter);
 
+
+        chip = view.findViewById(R.id.chip2);
+        chip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, RecommendedActivity.class);
+                startActivity(i);
+            }
+        });
+
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
         flightsList.clear();
-        flightsList.add(new Flights(R.drawable.norway, "Norway", "1200"));
-        flightsList.add(new Flights(R.drawable.tokyo, "japan", "900"));
+        flightsList.add(new Flights(R.drawable.norway, "Norway", "1200", null));
+        flightsList.add(new Flights(R.drawable.tokyo, "japan", "900", null));
     }
 
 }

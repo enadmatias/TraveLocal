@@ -77,13 +77,14 @@
         android:layout_marginBottom="200dp"
         android:background="@drawable/editext_border"
         android:backgroundTint="#7851A9"
-        android:text="LOG IN"
+        android:text="Login"
         android:textColor="#FFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        android:textAllCaps="false"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

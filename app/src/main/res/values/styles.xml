@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
@@ -18,7 +18,13 @@
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="MyTheme" parent="android:Theme.Holo.Light">
+        <item name="actionButtonStyle">@style/ActionBarStyle</item>
+    </style>
 
+    <style name="ActionBarStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="color">@color/colorGrey</item>
+    </style>
 
 
 </resources>
